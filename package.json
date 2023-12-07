@@ -1,0 +1,63 @@
+{
+  "name": "@dm0104x/vue-countup-v3",
+  "description": "A Vue 3 component for CountUp",
+  "author": {
+    "name": "yoke",
+    "email": "2480790748@qq.com"
+  },
+  "version": "0.0.3",
+  "type": "module",
+  "main": "dist/vue3-countup.umd.cjs",
+  "module": "dist/vue3-countup.js",
+  "types": "dist/components/index.d.ts",
+  "typings": "dist/index.d.ts",
+  "exports": {
+    "*": {
+      "import": "./dist/vue3-countup.js",
+      "require": "./dist/vue3-countup.umd.cjs"
+    }
+  },
+  "homepage": "https://github.com/yoke0104x/vue-countup-v3",
+  "bugs": {
+    "url": "https://github.com/yoke0104x/vue-countup-v3/issues"
+  },
+  "jsdelivr": "dist/vue3-countup.cjs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yoke0104x/vue-countup-v3.git"
+  },
+  "keywords": [
+    "vue3",
+    "countup",
+    "vue-countup",
+    "library"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview"
+  },
+   "peerDependencies": {
+    "countup.js": "latest",
+    "vue": "latest"
+  },
+  "dependencies": {
+    "@types/node": "^20.10.3",
+    "countup.js": "^2.8.0",
+    "vue": "^3.3.8"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.5.0",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.0",
+    "vite-plugin-dts": "^3.6.4",
+    "vue-tsc": "^1.8.22"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
+  "source": "src/components/vueCountUp/index.vue",
+  "unpkg": "dist/vue3-countup.cjs"
+}
