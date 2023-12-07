@@ -9,7 +9,7 @@
   "type": "module",
   "main": "dist/vue3-countup.umd.cjs",
   "module": "dist/vue3-countup.js",
-  "types": "dist/components/index.d.ts",
+  "types": "dist/index.d.ts",
   "typings": "dist/index.d.ts",
   "exports": {
     "*": {
