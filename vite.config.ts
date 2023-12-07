@@ -15,6 +15,7 @@ export default defineConfig({
       rollupTypes: true
     })
   ],
+  // base: '/vue-countup-v3',
   build: {
     lib: {
       // 入口指向组件库入口模块
