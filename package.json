@@ -5,7 +5,7 @@
     "name": "yoke",
     "email": "2480790748@qq.com"
   },
-  "version": "0.0.3",
+  "version": "0.0.4",
   "type": "module",
   "main": "dist/vue3-countup.umd.cjs",
   "module": "dist/vue3-countup.js",
