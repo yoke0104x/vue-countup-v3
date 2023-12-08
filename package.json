@@ -14,7 +14,8 @@
   "exports": {
     ".": {
       "import": "./dist/vue3-countup.js",
-      "require": "./dist/vue3-countup.umd.cjs"
+      "require": "./dist/vue3-countup.umd.cjs",
+      "types": "./dist/index.d.ts"
     }
   },
   "homepage": "https://github.com/yoke0104x/vue-countup-v3",
