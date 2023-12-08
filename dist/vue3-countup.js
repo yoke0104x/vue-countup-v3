@@ -1,4 +1,4 @@
-import { defineComponent as v, ref as w, reactive as F, onMounted as y, watch as E, openBlock as S, createElementBlock as A } from "vue";
+import { defineComponent as F, ref as w, reactive as y, onMounted as S, watch as E, openBlock as A, createElementBlock as b } from "vue";
 var c = function() {
   return c = Object.assign || function(s) {
     for (var n, i = 1, a = arguments.length; i < a; i++)
@@ -6,7 +6,7 @@ var c = function() {
         Object.prototype.hasOwnProperty.call(n, t) && (s[t] = n[t]);
     return s;
   }, c.apply(this, arguments);
-}, b = function() {
+}, D = function() {
   function s(n, i, a) {
     var t = this;
     this.endVal = i, this.options = a, this.version = "2.8.0", this.defaults = { startVal: 0, decimalPlaces: 0, duration: 2, useEasing: !0, useGrouping: !0, useIndianSeparators: !1, smartEasingThreshold: 999, smartEasingAmount: 333, separator: ",", decimal: ".", prefix: "", suffix: "", enableScrollSpy: !1, scrollSpyDelay: 200, scrollSpyOnce: !1 }, this.finalEndVal = null, this.useEasing = !0, this.countDown = !1, this.error = "", this.startVal = 0, this.paused = !0, this.once = !1, this.count = function(e) {
@@ -81,11 +81,12 @@ var c = function() {
     this.startTime = null, this.duration = 1e3 * Number(this.options.duration), this.remaining = this.duration;
   }, s;
 }();
-function D(s) {
+function C(s) {
   var n, i;
   return ((i = (n = s.toString().split(".")) == null ? void 0 : n[1]) == null ? void 0 : i.length) || 0;
 }
-const C = /* @__PURE__ */ v({
+const v = /* @__PURE__ */ F({
+  name: "VueCountUp",
   __name: "index",
   props: {
     endVal: {},
@@ -93,14 +94,14 @@ const C = /* @__PURE__ */ v({
     isAutoDecimalPlaces: { type: Boolean, default: !1 }
   },
   setup(s) {
-    const n = s, { endVal: i, isAutoDecimalPlaces: a } = n, t = w(), e = w(), o = F({
+    const n = s, { endVal: i, isAutoDecimalPlaces: a } = n, t = w(), e = w(), o = y({
       endVal: 0,
       startVal: 0
     }), r = (l, u, d) => {
-      const h = a ? D(l) : 0;
-      e.value = new b(t.value, l, { ...d, decimalPlaces: h, startVal: u }), e.value.start();
+      const h = a ? C(l) : 0;
+      e.value = new D(t.value, l, { ...d, decimalPlaces: h, startVal: u }), e.value.start();
     };
-    return y(() => {
+    return S(() => {
       t.value && (r(i, 0, {}), o.endVal = i);
     }), E(
       () => n.endVal,
@@ -112,17 +113,17 @@ const C = /* @__PURE__ */ v({
       (l) => {
         r(o.endVal, o.startVal, l);
       }
-    ), (l, u) => (S(), A("span", {
+    ), (l, u) => (A(), b("span", {
       ref_key: "countRef",
       ref: t
     }, null, 512));
   }
 }), N = {
   install: (s) => {
-    s.component("VueCountUp", C);
+    s.component(v.name, v);
   }
 };
 export {
-  C as VueCountUp,
+  v as VueCountUp,
   N as default
 };

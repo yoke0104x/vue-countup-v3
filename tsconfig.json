@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "useDefineForClassFields": true,
-    "module": "ESNext",
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "baseUrl": ".",
     /* Bundler mode */
@@ -10,7 +9,9 @@
     "resolveJsonModule": true,
     "noEmit": true,
     "jsx": "preserve",
-    "outDir": "types",
+    "module": "commonjs",
+    "outDir": "lib",
+    "declaration": true,
     "skipLibCheck": true, // 忽略所有的声明文件（ *.d.ts）的类型检查。
     "target": "esnext", // 指定ECMAScript目标版本 esnext
     "typeRoots": ["../node_modules/@types"],
