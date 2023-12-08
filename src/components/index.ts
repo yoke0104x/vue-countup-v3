@@ -5,10 +5,11 @@ import { App } from "vue";
 export {
     VueCountUp
 };
+
 export type { CountUpProps };
 
 export default {
     install: (app: App) => {
-        app.component('VueCountUp', VueCountUp);
+        app.component(VueCountUp.name, VueCountUp);
     },
 };

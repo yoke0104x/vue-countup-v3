@@ -1,7 +1,11 @@
-<script setup lang="ts" name="VueCountUp">
+<script setup lang="ts">
 import { onMounted, watch, ref, withDefaults, reactive } from "vue";
 import { CountUp, type CountUpOptions } from 'countup.js'
 import { parseDecimal } from "./utils.ts"
+
+defineOptions({
+    name: 'VueCountUp'
+})
 
 export type CountUpProps = {
     // 最后的值
