@@ -5,14 +5,14 @@
     "name": "yoke",
     "email": "2480790748@qq.com"
   },
-  "version": "0.0.4",
+  "version": "0.0.5",
   "type": "module",
   "main": "dist/vue3-countup.umd.cjs",
   "module": "dist/vue3-countup.js",
   "types": "dist/index.d.ts",
   "typings": "dist/index.d.ts",
   "exports": {
-    "*": {
+    ".": {
       "import": "./dist/vue3-countup.js",
       "require": "./dist/vue3-countup.umd.cjs"
     }
